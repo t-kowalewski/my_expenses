@@ -50,9 +50,12 @@ class MyHomePage extends StatelessWidget {
             ),
           ),
           // List of Transactions
-          Card(
-            color: Colors.green,
-            child: Text('List of TX'),
+          Column(
+            children: transactions.map((item) {
+              return Card(
+                child: Text(item.title),
+              );
+            }).toList(),
           ),
         ],
       ),
