@@ -55,6 +55,7 @@ class MyHomePage extends StatelessWidget {
               return Card(
                 child: Row(
                   children: <Widget>[
+                    // Price
                     Container(
                       margin: EdgeInsets.symmetric(
                         vertical: 10,
@@ -76,6 +77,7 @@ class MyHomePage extends StatelessWidget {
                         ),
                       ),
                     ),
+                    // Title & Date
                     Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: <Widget>[
