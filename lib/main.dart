@@ -56,8 +56,40 @@ class MyHomePage extends StatelessWidget {
 
           // Input
           Card(
-            child: Column(
-              children: <Widget>[],
+            child: Container(
+              margin: EdgeInsets.all(15),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.end,
+                children: <Widget>[
+                  TextField(
+                    cursorColor: Colors.orange,
+                    decoration: InputDecoration(
+                      labelText: 'Title',
+                      focusedBorder: UnderlineInputBorder(
+                        borderSide: BorderSide(
+                          color: Colors.orange[800],
+                        ),
+                      ),
+                    ),
+                  ),
+                  TextField(
+                    cursorColor: Colors.orange,
+                    decoration: InputDecoration(
+                      labelText: 'Price',
+                      focusedBorder: UnderlineInputBorder(
+                        borderSide: BorderSide(
+                          color: Colors.orange[800],
+                        ),
+                      ),
+                    ),
+                  ),
+                  FlatButton(
+                    child: Text('Add Transaction'),
+                    textColor: Colors.orange[800],
+                    onPressed: () {},
+                  )
+                ],
+              ),
             ),
           ),
 
@@ -89,7 +121,7 @@ class MyHomePage extends StatelessWidget {
                         ),
                       ),
                     ),
-                    
+
                     // Title & Date
                     Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
