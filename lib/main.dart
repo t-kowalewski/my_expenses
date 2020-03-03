@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:intl/intl.dart';
+
 import './transaction.dart';
 
 void main() => runApp(MyApp());
@@ -35,9 +37,11 @@ class MyHomePage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text('Personal Expenses'),
+        centerTitle: true,
+        backgroundColor: Colors.orange,
       ),
       body: Column(
-        mainAxisAlignment: MainAxisAlignment.spaceAround,
+        // mainAxisAlignment: MainAxisAlignment.spaceAround,
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: <Widget>[
           // Chart
@@ -49,6 +53,14 @@ class MyHomePage extends StatelessWidget {
               elevation: 5,
             ),
           ),
+
+          // Input
+          Card(
+            child: Column(
+              children: <Widget>[],
+            ),
+          ),
+
           // List of Transactions
           Column(
             children: transactions.map((item) {
@@ -77,6 +89,7 @@ class MyHomePage extends StatelessWidget {
                         ),
                       ),
                     ),
+                    
                     // Title & Date
                     Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
@@ -90,7 +103,7 @@ class MyHomePage extends StatelessWidget {
                           ),
                         ),
                         Text(
-                          item.date.toString(),
+                          DateFormat('MMMM d, y - H:m').format(item.date),
                           style: TextStyle(
                             fontSize: 12,
                             color: Colors.grey,
