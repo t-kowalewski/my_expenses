@@ -28,17 +28,29 @@ class _TransactionsMainState extends State<TransactionsMain> {
     ),
   ];
 
+  // Methods
+  void _addNewTransaction(String title, double price) {
+    final newTx = Transaction(
+      id: DateTime.now().toString(),
+      title: title,
+      amount: price,
+      date: DateTime.now(),
+    );
+
+    setState(() {
+      _transactions.add(newTx);
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Column(
       children: <Widget>[
         // Input
-        TransactionInput(),
+        TransactionInput(_addNewTransaction),
 
         // List of Transactions
-        TransactionList(
-          transactions: _transactions,
-        ),
+        TransactionList(_transactions),
       ],
     );
   }

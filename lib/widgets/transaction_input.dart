@@ -4,6 +4,11 @@ class TransactionInput extends StatelessWidget {
   // Properties
   final titleController = TextEditingController();
   final priceController = TextEditingController();
+  
+  // Methods
+  final Function addNewTransaction;
+
+  TransactionInput(this.addNewTransaction);
 
   @override
   Widget build(BuildContext context) {
@@ -46,10 +51,12 @@ class TransactionInput extends StatelessWidget {
               child: Text('Add Transaction'),
               textColor: Colors.orange[800],
               onPressed: () {
-                // print(titleInput);
-                // print(priceInput);
-                print(titleController.text);
-                print(priceController.text);
+                // print(titleController.text);
+                // print(priceController.text);
+                addNewTransaction(
+                  titleController.text,
+                  double.parse(priceController.text),
+                );
               },
             ),
           ],
