@@ -4,7 +4,7 @@ class TransactionInput extends StatelessWidget {
   // Properties
   final titleController = TextEditingController();
   final priceController = TextEditingController();
-  
+
   // Methods
   final Function addNewTransaction;
 
