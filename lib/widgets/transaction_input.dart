@@ -30,9 +30,6 @@ class TransactionInput extends StatelessWidget {
                 ),
               ),
               controller: titleController,
-              // onChanged: (inputItem) {
-              //   titleInput = inputItem;
-              // },
             ),
             TextField(
               cursorColor: Colors.orange,
@@ -45,14 +42,11 @@ class TransactionInput extends StatelessWidget {
                 ),
               ),
               controller: priceController,
-              // onChanged: (inputItem) => priceInput = inputItem,
             ),
             FlatButton(
               child: Text('Add Transaction'),
               textColor: Colors.orange[800],
               onPressed: () {
-                // print(titleController.text);
-                // print(priceController.text);
                 addNewTransaction(
                   titleController.text,
                   double.parse(priceController.text),
