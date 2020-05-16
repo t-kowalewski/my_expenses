@@ -19,6 +19,7 @@ class TransactionInput extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.end,
           children: <Widget>[
+            // Input Fields
             TextField(
               cursorColor: Colors.orange,
               decoration: InputDecoration(
@@ -43,6 +44,8 @@ class TransactionInput extends StatelessWidget {
               ),
               controller: priceController,
             ),
+
+            // Add Button
             FlatButton(
               child: Text('Add Transaction'),
               textColor: Colors.orange[800],
